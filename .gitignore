@@ -1,0 +1,6 @@
+# Build
+/build/
+
+#Test and config files
+/.vscode/
+/test*/
