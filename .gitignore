@@ -3,6 +3,10 @@
 build*
 nul
 
+#cygwin
+/dll/
+cyg*
+
 #Test and config files
 /.vscode/
 /test*/
