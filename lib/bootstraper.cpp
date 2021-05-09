@@ -1,4 +1,6 @@
 #include "bootstraper.h"
+#include "flags.h"
+#include <vector>
 
 //globals
 char *flags[5];
@@ -53,7 +55,6 @@ int dirExists(const char* path){
     else if(info.st_mode & S_IFDIR) return 1;
     else return 0;
 }
-
 
 int init_bootstrap(){
     //TODO: add spdlog for better loggings and verbose!!
