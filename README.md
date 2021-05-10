@@ -3,7 +3,7 @@ A simple but elegant library to create a local backend for desktop apps.
 
 This library prioritizes the application processing runtime by sending the calculations and processable data from the front-end directly to the local bootstrapper written by c++ using local sockets.
 
-Written with native POSIX functions, I made it possible to use this library on macOS and Windows using cross-compile techniques. (For more information, go to [Usage and Installations](##Usage_and_Installations))
+Written with native POSIX functions, I made it possible to use this library on macOS and Windows using cross-compile techniques. (For more information, go to [Usage and Installations](#usage-and-installations))
 
 ## How Worker+ works?
 Explaining how this library works might help you understand the logic of the background running bootstrapper process running in the **desktop** environment.
