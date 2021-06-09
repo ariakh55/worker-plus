@@ -18,7 +18,7 @@ After we have connected to the bootstrapper; We can send in our flags using stri
 ## Usage and Installations
 ### Global build
 ``` bash
-    $g++ -g main.cpp lib/flags.cpp lib/bootstaper.cpp -o main[file extention according to the specified OS] -mwindows
+g++ -g main.cpp lib/flags.cpp lib/bootstaper.cpp -o main[file extention according to the specified OS] -mwindows
 ```
 
 ### Makefile
