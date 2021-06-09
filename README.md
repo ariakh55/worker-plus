@@ -21,10 +21,13 @@ After we have connected to the bootstrapper; We can send in our flags using stri
     $g++ -g main.cpp lib/flags.cpp lib/bootstaper.cpp -o main[file extention according to the specified OS] -mwindows
 ```
 
+### Makefile
+Makefile is now added to the library bundle.
+Run ```make build``` to have a clean build of the library bundle.
+All of the instructions to build for Windows and MacOS are included in the Makefile.
+
 ### Linux
 Copy ```main.cpp``` and all files in the ```lib``` in the UI working source directory and specify the location of ```package.json``` then Using ```g++``` build the program
-
-**Todo :**  Add makeFile!
 
 ### Windows
 Do the steps above. but build the ```main.cpp``` along with files in ```lib``` directory using cygwin mingw then build the ```windows_main.cpp``` in order to make a valid executable for Windows system
