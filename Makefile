@@ -9,18 +9,33 @@ CC = g++
 # CFLAGS = -mwindows
 
 # Change the file extension to the OS specific executable extension.
-# OBJ = build/main.exe
-OBJ = build/main
+# OBJ = main.exe
+OBJ = main
 
 # Add extra flag processing and calculation flags
 CPP_LIB = lib/bootstraper.cpp lib/flags.cpp
 
 build: prebuild
-	$(CC) -g main.cpp $(CPP_LIB) -o $(OBJ) #$(CFLAGS)
+	$(CC) -g main.cpp $(CPP_LIB) -o $(DIR)/$(OBJ) #$(CFLAGS)
 
-#Windows prebuild action
+# Windows prebuild action
 # prebuild:
 #	if exist ".\build\"  echo "Dir exists" else mkdir ".\build\"
 
+# Specify tagrting operating system.
+# Linux = linux
+# Windows = win32
+# MacOS = darwin
+PLATFORM = linux
+
+# Finding the output targeting dirctory
+DIR = $$(find ./out -type d -name "*$(PLATFORM)*")
+
 prebuild:
-	if [ -d "./build" ]; then echo "Dir exists"; else mkdir build; fi
+#	Development build dirctory
+#	if [ -d "./build" ]; then echo "Dir exists"; else mkdir build; fi
+# 	Electron build to create out folder
+	npm install;\
+	npm run package
+
+
